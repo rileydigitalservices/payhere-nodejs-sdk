@@ -12,7 +12,7 @@
 [![Build Status](https://travis-ci.org/rileydigitalservices/payhere-node-sdk.svg?branch=master)](https://travis-ci.org/rileydigitalservices/payhere-node-sdk)
 [![NPM Version](https://badge.fury.io/js/payhere-sdk.svg)](https://badge.fury.io/js/payhere-sdk)
 ![Installs](https://img.shields.io/npm/dt/payhere-sdk.svg)
-[![Known Vulnerabilities](https://snyk.io/test/npm/payhere-sdk/badge.svg)](https://snyk.io/test/npm/payhere-sdk)
+[![Known Vulnerabilities](https://snyk.io/test/github/rileydigitalservices/payhere-node-sdk/badge.svg?targetFile=package.json)](https://snyk.io/test/github/rileydigitalservices/payhere-node-sdk?targetFile=package.json)
 [![Coverage Status](https://coveralls.io/repos/github/rileydigitalservices/payhere-node-sdk/badge.svg?branch=master)](https://coveralls.io/github/rileydigitalservices/payhere-node-sdk?branch=master)
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/payhere-api-sdk/)
 
