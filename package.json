@@ -1,5 +1,5 @@
 {
-  "name": "payhere-node-sdk",
+  "name": "payhere-sdk",
   "version": "0.1.0",
   "description": "Payhere API Client for NodeJS written in TypeScript",
   "main": "lib/index.js",
