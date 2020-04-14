@@ -9,7 +9,7 @@
 </div>
 
 
-[![Build Status](https://travis-ci.com/rileydigitalservices/payhere-node-sdk.svg?branch=master)](https://travis-ci.com/rileydigitalservices/payhere-node-sdk)
+[![Build Status](https://travis-ci.org/rileydigitalservices/payhere-node-sdk.svg?branch=master)](https://travis-ci.org/rileydigitalservices/payhere-node-sdk)
 [![NPM Version](https://badge.fury.io/js/payhere-sdk.svg)](https://badge.fury.io/js/payhere-sdk)
 ![Installs](https://img.shields.io/npm/dt/payhere-sdk.svg)
 [![Known Vulnerabilities](https://snyk.io/test/npm/payhere-sdk/badge.svg)](https://snyk.io/test/npm/payhere-sdk)

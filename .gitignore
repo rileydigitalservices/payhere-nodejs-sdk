@@ -25,4 +25,4 @@ test/**/out
 #secrets
 *.pem
 
-package-lock
+package-lock.json
