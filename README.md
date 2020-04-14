@@ -13,9 +13,9 @@
 
 [![npm package](https://img.shields.io/npm/v/payhere-sdk/latest.svg?style=flat-square)](https://www.npmjs.com/package/payhere-sdk)
 [![npm downloads](https://img.shields.io/npm/dt/payhere-sdk.svg?style=flat-square)](https://www.npmjs.com/package/payhere-sdk)
-[![GitHub issues](https://img.shields.io/github/issues/rileydigitalservices/payhere-sdk.svg?style=flat-square)](https://github.com/rileydigitalservices/payhere-sdk)
-[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/payhere-sdk.svg?style=flat-square)](https://www.npmjs.com/package/payhere-sdk)
-![GitHub](https://img.shields.io/github/license/rileydigitalservices/payhere-sdk.svg?style=flat-square)
+[![GitHub issues](https://img.shields.io/github/issues/rileydigitalservices/payhere-node-sdk.svg?style=flat-square)](https://github.com/rileydigitalservices/payhere-node-sdk)
+[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/payhere-node-sdk.svg?style=flat-square)](https://www.npmjs.com/package/payhere-node-sdk)
+![GitHub](https://img.shields.io/github/license/rileydigitalservices/payhere-node-sdk.svg?style=flat-square)
 ![David](https://img.shields.io/david/rileydigitalservices/payhere-sdk.svg?style=flat-square)
 ![David](https://img.shields.io/david/dev/rileydigitalservices/payhere-sdk.svg?style=flat-square)
 [![Known Vulnerabilities](https://snyk.io/test/github/rileydigitalservices/payhere-node-sdk/badge.svg?targetFile=package.json)](https://snyk.io/test/github/rileydigitalservices/payhere-node-sdk?targetFile=package.json)
