@@ -14,7 +14,7 @@
 ![Installs](https://img.shields.io/npm/dt/payhere-sdk.svg)
 [![Known Vulnerabilities](https://snyk.io/test/npm/payhere-sdk/badge.svg)](https://snyk.io/test/npm/payhere-sdk)
 [![Coverage Status](https://coveralls.io/repos/github/rileydigitalservices/payhere-node-sdk/badge.svg?branch=master)](https://coveralls.io/github/rileydigitalservices/payhere-node-sdk?branch=master)
-[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/payhere-api-developers/)
+[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/payhere-api-sdk/)
 
 
 ## Usage
@@ -75,7 +75,7 @@ const inpayments = Inpayments();
 
 1. `requestToPay(request: PaymentRequest): Promise<string>`: This operation is used to request a payment from a consumer (Payer). The payer will be asked to authorize the payment. The transaction is executed once the payer has authorized the payment. The transaction will be in status PENDING until it is authorized or declined by the payer or it is timed out by the system. Status of the transaction can be validated by using `getTransaction`
 
-2. `getTransaction(transactionId: string): Promise<Payment>`: Retrieve transaction information using the `transactionId` returned by `requestToPay`. You can invoke it at intervals until the transaction fails or succeeds. If the transaction has failed, it will throw an appropriate error. The error will be a subclass of `MtnMoMoError`. Check [`src/error.ts`](https://github.com/rileydigitalservices/payhere-node-sdk/blob/master/src/errors.ts) for the various errors that can be thrown
+2. `getTransaction(transactionId: string): Promise<Payment>`: Retrieve transaction information using the `transactionId` returned by `requestToPay`. You can invoke it at intervals until the transaction fails or succeeds. If the transaction has failed, it will throw an appropriate error. The error will be a subclass of `PayhereError`. Check [`src/error.ts`](https://github.com/rileydigitalservices/payhere-node-sdk/blob/master/src/errors.ts) for the various errors that can be thrown
 
 #### Sample Code
 
@@ -136,7 +136,7 @@ const outpayments = Outpayments();
 
 Used to transfer an amount from the owner’s account to a payee account. It returns a transaction id which can use to check the transaction status with the `getTransaction` function
 
-2. `getTransaction(transactionId: string): Promise<Transfer>`: Retrieve transaction information using the `transactionId` returned by `transfer`. You can invoke it at intervals until the transaction fails or succeeds. If the transaction has failed, it will throw an appropriate error. The error will be a subclass of `MtnMoMoError`. Check [`src/error.ts`](https://github.com/rileydigitalservices/payhere-node-sdk/blob/master/src/errors.ts) for the various errors that can be thrown
+2. `getTransaction(transactionId: string): Promise<Transfer>`: Retrieve transaction information using the `transactionId` returned by `transfer`. You can invoke it at intervals until the transaction fails or succeeds. If the transaction has failed, it will throw an appropriate error. The error will be a subclass of `PayhereError`. Check [`src/error.ts`](https://github.com/rileydigitalservices/payhere-node-sdk/blob/master/src/errors.ts) for the various errors that can be thrown
 
 #### Sample Code
 

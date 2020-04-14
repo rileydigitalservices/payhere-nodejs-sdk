@@ -54,7 +54,7 @@ describe("Validate", function() {
               validateGlobalConfig.bind(null, {
                 callbackHost: "example.com",
                 environment: Environment.PRODUCTION,
-                baseUrl: "mtn production base url"
+                baseUrl: "payhere production base url"
               })
             ).to.not.throw();
           });

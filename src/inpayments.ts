@@ -101,7 +101,7 @@ export default class Inpayments {
    * at intervals until your transaction fails or succeeds.
    *
    * If the transaction has failed, it will throw an appropriate error. The error will be a subclass
-   * of `MtnMoMoError`. Check [`src/error.ts`](https://github.com/rileydigitalservices/payhere-node-sdk/blob/master/src/errors.ts)
+   * of `PayhereError`. Check [`src/error.ts`](https://github.com/rileydigitalservices/payhere-node-sdk/blob/master/src/errors.ts)
    * for the various errors that can be thrown
    *
    * @param referenceId the value returned from `requestToPay`
