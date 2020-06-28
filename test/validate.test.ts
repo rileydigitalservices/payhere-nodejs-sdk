@@ -83,7 +83,6 @@ describe("Validate", function() {
       });
     });
 
-
     context("when password is not specified", function() {
       it("throws an error", function() {
         expect(

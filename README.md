@@ -1,6 +1,6 @@
 # Payhere API NodeJS Client</h1>
 
-<strong>World class payments for your apps with Payhere API</strong>
+<strong>Power your ECMA apps Payhere API</strong>
 
 <div>
   Join our active, engaged community: <br>
@@ -9,17 +9,17 @@
 </div>
 
 
-[![Build Status](https://travis-ci.org/rileydigitalservices/payhere-node-sdk.svg?branch=master)](https://travis-ci.org/rileydigitalservices/payhere-node-sdk)
+[![Build Status](https://travis-ci.org/rileydigitalservices/payhere-nodejs-sdk.svg?branch=master)](https://travis-ci.org/rileydigitalservices/payhere-nodejs-sdk)
 
 [![npm package](https://img.shields.io/npm/v/payhere-sdk/latest.svg?style=flat-square)](https://www.npmjs.com/package/payhere-sdk)
 [![npm downloads](https://img.shields.io/npm/dt/payhere-sdk.svg?style=flat-square)](https://www.npmjs.com/package/payhere-sdk)
-[![GitHub issues](https://img.shields.io/github/issues/rileydigitalservices/payhere-node-sdk.svg?style=flat-square)](https://github.com/rileydigitalservices/payhere-node-sdk)
+[![GitHub issues](https://img.shields.io/github/issues/rileydigitalservices/payhere-nodejs-sdk.svg?style=flat-square)](https://github.com/rileydigitalservices/payhere-nodejs-sdk)
 [![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/payhere-sdk.svg?style=flat-square)](https://www.npmjs.com/package/payhere-sdk)
-![GitHub](https://img.shields.io/github/license/rileydigitalservices/payhere-node-sdk.svg?style=flat-square)
-[![Dependency Status](https://david-dm.org/rileydigitalservices/payhere-node-sdk.svg)](https://david-dm.org/rileydigitalservices/payhere-node-sdk)
-[![Dev Dependency Status](https://david-dm.org/rileydigitalservices/payhere-node-sdk.svg#info=devDependencies)](https://david-dm.org/rileydigitalservices/payhere-node-sdk#info=devDependencies)
-[![Known Vulnerabilities](https://snyk.io/test/github/rileydigitalservices/payhere-node-sdk/badge.svg?targetFile=package.json)](https://snyk.io/test/github/rileydigitalservices/payhere-node-sdk?targetFile=package.json)
-[![Coverage Status](https://coveralls.io/repos/github/rileydigitalservices/payhere-node-sdk/badge.svg?branch=master)](https://coveralls.io/github/rileydigitalservices/payhere-node-sdk?branch=master)
+![GitHub](https://img.shields.io/github/license/rileydigitalservices/payhere-nodejs-sdk.svg?style=flat-square)
+[![Dependency Status](https://david-dm.org/rileydigitalservices/payhere-nodejs-sdk.svg)](https://david-dm.org/rileydigitalservices/payhere-nodejs-sdk)
+[![Dev Dependency Status](https://david-dm.org/rileydigitalservices/payhere-nodejs-sdk.svg#info=devDependencies)](https://david-dm.org/rileydigitalservices/payhere-nodejs-sdk#info=devDependencies)
+[![Known Vulnerabilities](https://snyk.io/test/github/rileydigitalservices/payhere-nodejs-sdk/badge.svg?targetFile=package.json)](https://snyk.io/test/github/rileydigitalservices/payhere-nodejs-sdk?targetFile=package.json)
+[![Coverage Status](https://coveralls.io/repos/github/rileydigitalservices/payhere-nodejs-sdk/badge.svg?branch=master)](https://coveralls.io/github/rileydigitalservices/payhere-nodejs-sdk?branch=master)
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/payhere-api-sdk/)
 
 
@@ -53,7 +53,7 @@ As an example, you might configure the library like this:
 const payhere = require("payhere-sdk");
 
 const defaultGlobalConfig: payhere.GlobalConfig = {
-  baseUrl: "http://sandbox.payhere.africa",
+  baseUrl: "https://api-sandbox.payhere.africa",
   environment: payhere.Environment.SANDBOX,
   version: "v1"
 };
@@ -81,7 +81,7 @@ const inpayments = Inpayments();
 
 1. `requestToPay(request: PaymentRequest): Promise<string>`: This operation is used to request a payment from a consumer (Payer). The payer will be asked to authorize the payment. The transaction is executed once the payer has authorized the payment. The transaction will be in status PENDING until it is authorized or declined by the payer or it is timed out by the system. Status of the transaction can be validated by using `getTransaction`
 
-2. `getTransaction(transactionId: string): Promise<Payment>`: Retrieve transaction information using the `transactionId` returned by `requestToPay`. You can invoke it at intervals until the transaction fails or succeeds. If the transaction has failed, it will throw an appropriate error. The error will be a subclass of `PayhereError`. Check [`src/error.ts`](https://github.com/rileydigitalservices/payhere-node-sdk/blob/master/src/errors.ts) for the various errors that can be thrown
+2. `getTransaction(transactionId: string): Promise<Payment>`: Retrieve transaction information using the `transactionId` returned by `requestToPay`. You can invoke it at intervals until the transaction fails or succeeds. If the transaction has failed, it will throw an appropriate error. The error will be a subclass of `PayhereError`. Check [`src/error.ts`](https://github.com/rileydigitalservices/payhere-nodejs-sdk/blob/master/src/errors.ts) for the various errors that can be thrown
 
 #### Sample Code
 
@@ -89,7 +89,7 @@ const inpayments = Inpayments();
 const payhere = require("payhere-sdk");
 
 const defaultGlobalConfig: payhere.GlobalConfig = {
-  baseUrl: "http://sandbox.payhere.africa",
+  baseUrl: "https://api-sandbox.payhere.africa",
   environment: payhere.Environment.SANDBOX,
   version: "v1"
 };
@@ -142,7 +142,7 @@ const outpayments = Outpayments();
 
 Used to transfer an amount from the owner’s account to a payee account. It returns a transaction id which can use to check the transaction status with the `getTransaction` function
 
-2. `getTransaction(transactionId: string): Promise<Transfer>`: Retrieve transaction information using the `transactionId` returned by `transfer`. You can invoke it at intervals until the transaction fails or succeeds. If the transaction has failed, it will throw an appropriate error. The error will be a subclass of `PayhereError`. Check [`src/error.ts`](https://github.com/rileydigitalservices/payhere-node-sdk/blob/master/src/errors.ts) for the various errors that can be thrown
+2. `getTransaction(transactionId: string): Promise<Transfer>`: Retrieve transaction information using the `transactionId` returned by `transfer`. You can invoke it at intervals until the transaction fails or succeeds. If the transaction has failed, it will throw an appropriate error. The error will be a subclass of `PayhereError`. Check [`src/error.ts`](https://github.com/rileydigitalservices/payhere-nodejs-sdk/blob/master/src/errors.ts) for the various errors that can be thrown
 
 #### Sample Code
 
@@ -150,7 +150,7 @@ Used to transfer an amount from the owner’s account to a payee account. It ret
 const payhere = require("payhere-sdk");
 
 const defaultGlobalConfig: payhere.GlobalConfig = {
-  baseUrl: "http://sandbox.payhere.africa",
+  baseUrl: "https://api-sandbox.payhere.africa",
   environment: payhere.Environment.SANDBOX,
   version: "v1"
 };

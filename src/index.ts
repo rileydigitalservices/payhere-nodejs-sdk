@@ -34,7 +34,7 @@ export interface PayhereClient {
 }
 
 // const defaultGlobalConfig: GlobalConfig = {
-//   baseUrl: "http://sandbox.payhere.africa",
+//   baseUrl: "https://api-sandbox.payhere.africa",
 //   environment: Environment.SANDBOX
 // };
 
@@ -53,8 +53,8 @@ export interface PayhereClient {
 export function create(globalConfig: GlobalConfig, userConfig: UserConfig): PayhereClient {
   validateGlobalConfig(globalConfig);
   validateUserConfig(userConfig);
-  const baseUrl = Environment.SANDBOX ? `http://sandbox.payhere.africa/${globalConfig.version}`
-                                      : `http://api.payhere.africa/${globalConfig.version}`;
+  const baseUrl = Environment.SANDBOX ? `https://api-sandbox.payhere.africa/${globalConfig.version}`
+                                      : `https://api.payhere.africa/${globalConfig.version}`;
   const modifiedGlobalConfig: GlobalConfig = {
     ...globalConfig,
     baseUrl
@@ -65,7 +65,7 @@ export function create(globalConfig: GlobalConfig, userConfig: UserConfig): Payh
       const client: AxiosInstance = createClient({
         ...modifiedGlobalConfig,
         ...userConfig });
-      
+
       return new Inpayments(client);
     },
 

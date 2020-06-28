@@ -7,7 +7,6 @@ import {
   ResourceAlreadyExistError,
   ResourceNotFoundError,
   ServiceUnavailableError,
-  TransactionCancelledError,
   UnspecifiedError
 } from "../src/errors";
 import { expect } from "./chai";
@@ -38,7 +37,6 @@ describe("Errors", function() {
           .is.instanceOf(NotAllowedTargetEnvironmentError)
           .and.has.property("message", "test message");
 
-
         expect(getError(FailureReason.RESOURCE_ALREADY_EXIST, "test message"))
           .is.instanceOf(ResourceAlreadyExistError)
           .and.has.property("message", "test message");
@@ -52,6 +50,5 @@ describe("Errors", function() {
           .and.has.property("message", "test message");
       });
     });
-    
   });
 });

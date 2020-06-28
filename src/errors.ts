@@ -1,6 +1,6 @@
 import { AxiosError } from "axios";
-import { Payment } from "./inpayments";
 import { FailureReason } from "./common";
+import { Payment } from "./inpayments";
 import { Transfer } from "./outpayments";
 
 interface ErrorBody {

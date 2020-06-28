@@ -14,7 +14,7 @@ export function createClient(
   client.defaults.baseURL = config.baseUrl;
   client.defaults.headers = {
     "Content-Type": "application/json",
-    Authorization: `Basic ${basicAuthToken}`,
+    "Authorization": `Basic ${basicAuthToken}`,
     "APP-ID": config.appId
   };
 

@@ -5,7 +5,7 @@ import * as payhere from "../src";
 import { expect } from "./chai";
 
 const defaultGlobalConfig: payhere.GlobalConfig = {
-  baseUrl: "http://sandbox.payhere.africa",
+  baseUrl: "https://api-sandbox.payhere.africa",
   environment: payhere.Environment.SANDBOX,
   version: "v1"
 };

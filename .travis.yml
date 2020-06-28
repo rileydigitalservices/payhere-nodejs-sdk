@@ -18,5 +18,5 @@ deploy:
     - npx semantic-release
   on:
     tags: false
-    repo: rileydigitalservices/payhere-node-sdk
+    repo: rileydigitalservices/payhere-nodejs-sdk
     branch: master

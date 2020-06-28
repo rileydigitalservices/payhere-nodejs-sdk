@@ -34,7 +34,6 @@ export interface UserConfig {
   password: string;
 }
 
-
 export enum Environment {
   SANDBOX = "sandbox",
   PRODUCTION = "production"
