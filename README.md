@@ -43,7 +43,6 @@ The credentials for the sandbox environment can be used straight away. In produc
 
 Before we can fully utilize the library, we need to specify global configurations. The global configuration must contain the following:
 
-- `baseUrl`: An optional base url to the Payhere API. By default the staging base url will be used
 - `environment`: Optional enviroment, either "sandbox" or "production". Default is 'sandbox'
 - `version`: The API version being accessed. This is mandatory.
 
@@ -53,7 +52,6 @@ As an example, you might configure the library like this:
 const payhere = require("payhere-sdk");
 
 const defaultGlobalConfig: payhere.GlobalConfig = {
-  baseUrl: "https://api-sandbox.payhere.africa",
   environment: payhere.Environment.SANDBOX,
   version: "v1"
 };
@@ -89,7 +87,6 @@ const inpayments = Inpayments();
 const payhere = require("payhere-sdk");
 
 const defaultGlobalConfig: payhere.GlobalConfig = {
-  baseUrl: "https://api-sandbox.payhere.africa",
   environment: payhere.Environment.SANDBOX,
   version: "v1"
 };
@@ -150,7 +147,6 @@ Used to transfer an amount from the owner’s account to a payee account. It ret
 const payhere = require("payhere-sdk");
 
 const defaultGlobalConfig: payhere.GlobalConfig = {
-  baseUrl: "https://api-sandbox.payhere.africa",
   environment: payhere.Environment.SANDBOX,
   version: "v1"
 };

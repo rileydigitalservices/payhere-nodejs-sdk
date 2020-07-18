@@ -53,8 +53,8 @@ export interface PayhereClient {
 export function create(globalConfig: GlobalConfig, userConfig: UserConfig): PayhereClient {
   validateGlobalConfig(globalConfig);
   validateUserConfig(userConfig);
-  const baseUrl = Environment.SANDBOX ? `https://api-sandbox.payhere.africa/${globalConfig.version}`
-                                      : `https://api.payhere.africa/${globalConfig.version}`;
+  const baseUrl = Environment.SANDBOX ? `https://api-sandbox.payhere.africa/api/${globalConfig.version}`
+                                      : `https://api.payhere.africa/api/${globalConfig.version}`;
   const modifiedGlobalConfig: GlobalConfig = {
     ...globalConfig,
     baseUrl

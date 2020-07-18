@@ -11,7 +11,6 @@ export function createClient(
   const basicAuthToken: string = Buffer.from(`${config.username}:${config.password}`)
                                        .toString("base64");
 
-  client.defaults.baseURL = config.baseUrl;
   client.defaults.headers = {
     "Content-Type": "application/json",
     "Authorization": `Basic ${basicAuthToken}`,
